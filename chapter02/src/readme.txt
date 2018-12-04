@@ -1,15 +1,25 @@
 描述：
 通过本章的学习，可以独立完成一个典型的基于spring的web应用
 
+
 启动方式：
 搜索maven project:
 双击jetty:run
 在浏览器输入localhost:8000/bbs/index.html访问
 
+
 已经弄明白的问题：
 1、AbstractTransactionalTestNGSpringContextTests
     在测试时会自动启动事务，自动回滚
     参考com.yaoyao.dao.TestUserDao写的源码查看备注
+
+2、src\main\resources\yaoyao-context.xml：
+    1)expression=" (execution(* com.yaoyao.service..*(..)))，其中service..两个点代表service下面的包及子包
+
+3、service层的事务注解提交会到这段代码：
+    org.springframework.transaction.interceptor.TransactionAspectSupport#invokeWithinTransaction——>
+    org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning
+
 
 问题：
 1、chapter02\pom.xml：
@@ -33,7 +43,6 @@
 6、src\main\resources\yaoyao-context.xml：
     1)<context:component-scan base-package="com.yaoyao.dao" />spring是怎么去扫描这个包路径的呢？
     2)<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" 这个id好像没有地方有用到，我把id="jdbcTemplate"删了，跑单元测试com.yaoyao.dao.TestUserDao.testGetMatchCount依旧能过
-    3)expression=" (execution(* com.yaoyao.service..*(..)))，其中service..两个点代表service下面的所有子包么？
 
 7、com.yaoyao.service.UserServiceTest
     @Autowired写在setUserService和userService上有区别么？测试了一把，两种写法都可以

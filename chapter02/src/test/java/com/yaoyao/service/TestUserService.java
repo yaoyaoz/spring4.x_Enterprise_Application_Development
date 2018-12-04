@@ -3,7 +3,7 @@ package com.yaoyao.service;
 import com.yaoyao.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
 import java.util.Date;
@@ -14,7 +14,7 @@ import java.util.Date;
  * Created by yaoyao on 2018-12-02.
  */
 @ContextConfiguration("classpath*:/yaoyao-context.xml")
-public class TestUserService extends AbstractTransactionalTestNGSpringContextTests {
+public class TestUserService extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private UserService userService;
@@ -25,7 +25,7 @@ public class TestUserService extends AbstractTransactionalTestNGSpringContextTes
         user.setUserId(222);
         user.setLastip("127.0.0.1");
         user.setLastVisit(new Date());
-        user.setCredits(60);
+        user.setCredits(1);
         userService.loginSuccess(user);
         System.out.println("测试UserService.loginSuccess完成");
     }

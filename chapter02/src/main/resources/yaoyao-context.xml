@@ -35,7 +35,7 @@
     <!-- 5、通过AOP配置提供事务增强，让service包下所有Bean的所有方法拥有事务 -->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="serviceMethod"
-                      expression=" (execution(* com.yaoyao.service.*.*(..))) and
+                      expression=" (execution(* com.yaoyao.service..*(..))) and
                         (@annotation(org.springframework.transaction.annotation.Transactional))"/>
         <aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice" />
     </aop:config>
