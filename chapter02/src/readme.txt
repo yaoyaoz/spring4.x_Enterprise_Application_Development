@@ -6,6 +6,11 @@
 双击jetty:run
 在浏览器输入localhost:8000/bbs/index.html访问
 
+已经弄明白的问题：
+1、AbstractTransactionalTestNGSpringContextTests
+    在测试时会自动启动事务，自动回滚
+    参考com.yaoyao.dao.TestUserDao写的源码查看备注
+
 问题：
 1、chapter02\pom.xml：
     <packaging>war</packaging>有什么用么？
@@ -36,13 +41,14 @@
 8、com.yaoyao.dao.UserDao.updateLoginInfo：
     书上那种写法会报错，不知道正确的传参应该怎么传？
 
+9、@Service、@Repository、@Autowired等这些注解有些什么不一样的含义么？
 
-问题：待解决：
-    事务配置加了之后，提交update就不生效了
+10、AbstractTransactionalTestNGSpringContextTests：开启事务的代码在哪？
 
-5、@Service、@Repository、@Autowired等这些注解有些什么不一样的含义么？
 
-6、com.yaoyao.service.UserService#loginSuccess
-    @Transactional 保持事务一致性？
+需要打断点确认的问题：
+1、单元测试走的事务是在spring-test类里面的，看看从web端进入，事务提交的代码是在哪呢？
+
+
 
 

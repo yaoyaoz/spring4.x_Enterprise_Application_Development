@@ -37,7 +37,7 @@ public class UserService {
         return userDao.findUserByUserName(userName);
     }
 
-//    @Transactional
+    @Transactional
     public void loginSuccess(User user) {
 
         user.setCredits(5 + user.getCredits());
