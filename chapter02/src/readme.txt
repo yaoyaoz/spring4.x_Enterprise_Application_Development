@@ -23,9 +23,10 @@
 
 问题：
 1、chapter02\pom.xml：
-    <packaging>war</packaging>有什么用么？
-    <file.encoding>UTF-8</file.encoding>是能控制这个工程的编码格式么？
-    依赖的连接池类库：commons-dbcp，数据库有用这个东西么？
+    1)<packaging>war</packaging>有什么用么？加了这个打包会报错，所以注释掉了。报错信息如下：
+        [ERROR] Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war (default-war) on project chapter02: Error assembling WAR: webxml attribute is required (or pre-existing WEB-INF/web.xml if executing in update mode)
+    2)<file.encoding>UTF-8</file.encoding>是能控制这个工程的编码格式么？
+    3)依赖的连接池类库：commons-dbcp，数据库有用这个东西么？
 
 2、com.yaoyao.domain.User：
     implements Serializable为什么要序列化呢？什么是序列化？这里不序列化有什么影响么？
@@ -54,10 +55,18 @@
 
 10、AbstractTransactionalTestNGSpringContextTests：开启事务的代码在哪？
 
+11、com.yaoyao.web.LoginController.loginCheck：
+    loginCheck(HttpServletRequest request, LoginCommand loginCommand)：loginCommand参数是怎么传过来的？
+
+12、src\main\webapp\WEB-INF\web.xml
+   src\main\webapp\WEB-INF\yaoyao-servlet.xml
+   不知道这两个文件里面配置的那些参数意思？
 
 需要打断点确认的问题：
 1、单元测试走的事务是在spring-test类里面的，看看从web端进入，事务提交的代码是在哪呢？
-
-
-
+2、chapter02\pom.xml：jetty插件的
+    <contextPath>/bbs</contextPath>配置如果不加，就默认采用pom.xml中设置的<artifactId>名称，测试一把
+    <scanIntervalSeconds>0</scanIntervalSeconds>热部署，默认为0，表示禁用热部署，如果设为3，就是修改了代码，不用重启3秒后就自动更新了么？测试一把
+3、chapter02\src\webapp\WEB-INF\jsp\login.jsp里展示的error是
+    com.yaoyao.web.LoginController.loginCheck return的error，测试一把
 
