@@ -5,9 +5,9 @@ package com.yaoyao.ioc;
  *
  * Created by yaoyao on 2018-12-16.
  */
-public class LiuDeHua {
+public class LiuDeHua implements GeLi {
 
-    void responseAsk(String saying) {
+    public void responseAsk(String saying) {
         System.out.println(saying);
     }
 

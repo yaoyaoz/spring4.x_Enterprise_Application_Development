@@ -7,6 +7,7 @@
     <groupId>com.yaoyao</groupId>
     <artifactId>chapter04</artifactId>
     <version>1.0</version>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
