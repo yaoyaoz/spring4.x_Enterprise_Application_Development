@@ -14,7 +14,7 @@ public class Director {
 
         //调用属性Setter方法注入
         GeLi geLi = new LiuDeHua();
-        moAttack.setGeLi(geLi);
+        moAttack.injectGeLi(geLi);
         moAttack.cityGateAsk();
     }
 

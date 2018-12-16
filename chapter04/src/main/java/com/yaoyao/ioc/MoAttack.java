@@ -2,15 +2,14 @@ package com.yaoyao.ioc;
 
 /**
  * 剧本
- *
+ * <p>
  * Created by yaoyao on 2018-12-16.
  */
-public class MoAttack {
+public class MoAttack implements ActorArrangable {
 
     private GeLi geLi;
 
-    //属性注入方法
-    public void setGeLi(GeLi geLi) {
+    public void injectGeLi(GeLi geLi) {
         this.geLi = geLi;
     }
 
