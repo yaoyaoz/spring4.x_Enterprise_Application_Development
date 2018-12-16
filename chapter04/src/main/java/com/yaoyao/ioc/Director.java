@@ -15,7 +15,7 @@ public class Director {
 
         //2、注入具体饰演者到剧本中
         MoAttack moAttack = new MoAttack(geLi);
-        geLi.responseAsk("墨者革离！");
+        moAttack.cityGateAsk();
     }
 
     @Test
