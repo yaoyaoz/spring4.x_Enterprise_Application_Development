@@ -9,22 +9,15 @@ import org.junit.Test;
  */
 public class MoAttack {
 
-    public void cityGateAsk() {
-        //1、引入革离角色接口
-        GeLi geLi = new LiuDeHua();
+    private GeLi geLi;
 
-        //2、通过接口展开剧情
+    //注入革离的具体饰演者
+    public MoAttack(GeLi geLi) {
+        this.geLi = geLi;
+    }
+
+    public void cityGateAsk() {
         geLi.responseAsk("墨者革离！");
     }
-
-    @Test
-    public void testCityGateAsk() {
-        MoAttack moAttack = new MoAttack();
-        moAttack.cityGateAsk();
-    }
-    /*
-     输出：
-     墨者革离！
-     */
 
 }
