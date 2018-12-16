@@ -1,7 +1,5 @@
 package com.yaoyao.ioc;
 
-import org.junit.Test;
-
 /**
  * 剧本
  *
@@ -11,8 +9,8 @@ public class MoAttack {
 
     private GeLi geLi;
 
-    //注入革离的具体饰演者
-    public MoAttack(GeLi geLi) {
+    //属性注入方法
+    public void setGeLi(GeLi geLi) {
         this.geLi = geLi;
     }
 

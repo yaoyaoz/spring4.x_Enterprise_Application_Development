@@ -4,17 +4,17 @@ import org.junit.Test;
 
 /**
  * 导演：安排角色的具体饰演者
- *
+ * <p>
  * Created by yaoyao on 2018-12-16.
  */
 public class Director {
 
     public void derect() {
-        //1、指定角色的饰演者
-        GeLi geLi = new LiuDeHua();
+        MoAttack moAttack = new MoAttack();
 
-        //2、注入具体饰演者到剧本中
-        MoAttack moAttack = new MoAttack(geLi);
+        //调用属性Setter方法注入
+        GeLi geLi = new LiuDeHua();
+        moAttack.setGeLi(geLi);
         moAttack.cityGateAsk();
     }
 
