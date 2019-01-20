@@ -25,7 +25,9 @@ public class ReflectTest {
         //2、获取类的默认构造函数对象并通过它实例化Car
         Constructor cons = clazz.getDeclaredConstructor((Class[]) null);
         //问题：这里为什么要用Class[]呢？不加[]，运行的时候就会报错：
-        //Exception in thread "main" java.lang.NoSuchMethodException: com.yaoyao.reflect.Car.<init>(null)
+        //Exception in thread "main" java.lang.
+        //
+        // : com.yaoyao.reflect.Car.<init>(null)
         Car car = (Car) cons.newInstance();
 
         //3、通过反射方法设置属性
