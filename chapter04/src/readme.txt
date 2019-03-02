@@ -10,7 +10,8 @@
 
 
 问题：
-
+1、com.yaoyao.beanfactory.BeanFactoryTest.getBean
+    照着例子敲的，也没跟源码，不太理解
 
 
 
