@@ -6,12 +6,15 @@
 2、反射：Car
 3、资源访问（Resource接口）
 
-笔记：
+4.4.2 ApplicationContext介绍
+    com.yaoyao.context
+    com.yaoyao.context.Beans:@Configuration
+    测试类：com.yaoyao.context.AnnotationApplicationContextTest.getBean
 
 
 问题：
 1、com.yaoyao.beanfactory.BeanFactoryTest.getBean
     照着例子敲的，也没跟源码，不太理解
-
+2、@Configuration和@repository有什么区别呢？都只是定义一个bean？
 
 
