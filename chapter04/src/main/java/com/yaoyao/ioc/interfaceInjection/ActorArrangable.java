@@ -1,4 +1,6 @@
-package com.yaoyao.ioc;
+package com.yaoyao.ioc.interfaceInjection;
+
+import com.yaoyao.ioc.GeLi;
 
 /**
  * Created by yaoyao on 2018-12-16.

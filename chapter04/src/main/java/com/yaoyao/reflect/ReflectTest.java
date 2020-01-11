@@ -28,7 +28,7 @@ public class ReflectTest {
         //Exception in thread "main" java.lang.
         //
         // : com.yaoyao.reflect.Car.<init>(null)
-        Car car = (Car) cons.newInstance();
+        Car car = (Car) cons.newInstance();//效果等同于new Car()
 
         //3、通过反射方法设置属性
         Method setBrand = clazz.getMethod("setBrand", String.class);
@@ -46,6 +46,7 @@ public class ReflectTest {
     }
     /**
      输出：
+     car的默认构造函数
      brand:红旗CA72; color:黑色; maxSpeed:200
      */
 

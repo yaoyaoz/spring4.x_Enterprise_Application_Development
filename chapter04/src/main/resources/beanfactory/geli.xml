@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 实现类实例化 -->
+    <bean id="geLi" class="com.yaoyao.ioc.LiuDeHua" />
+    <bean id="moAttack" class="com.yaoyao.ioc.attributeInjection.MoAttack2"
+        p:geli-ref="geLi"/> <!-- geli-ref的geli是去找的com.yaoyao.ioc.attributeInjection.MoAttack2的setGeli -->
+
+</beans>

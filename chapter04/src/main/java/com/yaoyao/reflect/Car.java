@@ -15,6 +15,7 @@ public class Car {
 
     //默认构造函数
     public Car() {
+        System.out.println("car的默认构造函数");
     }
 
     //带参构造函数
