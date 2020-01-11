@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 //@EnableAutoConfiguration
 @SpringBootApplication //在Spring Boot 1.2+中可以使用@SpringBootApplication注解代替上面3个注解
 @EnableTransactionManagement //启用注解事物管理（相当于chapter02 xml中的<tx:annotation-driven/>）
-public class Application {
+public class Application {//配置springMVC框架，但是不继承这个好像也没关系呀 extends SpringBootServletInitializer
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -30,9 +30,9 @@ public class Application {
         return new DataSourceTransactionManager(dataSource);
     }
 
-    //在boot环境中peizhiMVC，为什么我在实际开发中没配这句代码呢？
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
-    }
+    //在boot环境中配置MVC，为什么我在实际开发中没配这句代码呢？
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(Application.class);
+//    }
 
 }

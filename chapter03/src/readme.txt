@@ -1,6 +1,15 @@
 1、启动：
 建了两个文件：
-chapter03\pom.xml
+chapter03\pom.xml:
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.3.RELEASE</version>
+    </parent>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
 com.yaoyao.web.BbsDaemon
 就启动起来了，神奇的spring boot。
 启动com.yaoyao.web.BbsDaemon.main，在浏览器访问http://localhost:8080，
@@ -20,13 +29,23 @@ com.yaoyao.Application.main
     在默认情况下，springboot会采用内嵌的tomcat运行当前项目。
     如果想使用jetty，则需要在依赖中添加一个jetty启动器（spring-boot-starter-jetty）即可
 
+2、chapter03\pom.xml:
+\org\springframework\boot\spring-boot-dependencies\1.3.3.RELEASE\spring-boot-dependencies-1.3.3.RELEASE.pom:
+    <spring.version>4.2.5.RELEASE</spring.version>
+<properties>
+    <!-- 父类指定了spring的版本为<spring.version>4.2.5.RELEASE</spring.version>，这里可以修改，但是改成4.2.2后，启动会报错 -->
+    <spring.version>4.2.2.RELEASE</spring.version>
+</properties>
+
+3、修改默认端口号：
+    \resources\application.properties：server.port
 
 问题：
 1、pom文件加了spring-boot-starter-jetty之后，在Maven Project——>Plugins里面没看到有jetty启动呢？
 
 2、com.yaoyao.Application.txManager:这个自定义事务管理有啥用呢？
 
-3、com.yaoyao.Application.configure:在实际开发中，我没配过这个也？
+3、com.yaoyao.Application.configure(extends SpringBootServletInitializer):在实际开发中，我没配过这个也？
 
 
 chapter04：

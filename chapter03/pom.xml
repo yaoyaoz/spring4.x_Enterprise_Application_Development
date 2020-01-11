@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+    <!-- 继承Spring Boot默认配置 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,6 +16,12 @@
     <version>1.0</version>
     <name>Spring4.x第三章实例</name>
     <packaging>war</packaging>
+
+
+        <!--<properties>
+            &lt;!&ndash; 父类指定了spring的版本为<spring.version>4.2.5.RELEASE</spring.version>，这里可以修改，但是改成4.2.2后，启动会报错 &ndash;&gt;
+            <spring.version>4.2.2.RELEASE</spring.version>
+        </properties>-->
 
     <!-- 根据应用需要添加不同类型的启动器依赖 -->
     <dependencies>
