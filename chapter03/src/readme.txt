@@ -1,3 +1,9 @@
+小工具
+srcAdd.jsp:查看jvm从哪个类包中加载指定类
+用法：把srcAdd.jsp放到Web应用的根路径洗，访问：
+http://localhost:8080/srcAdd.jsp?className=com.yaoyao.dao.UserDao即可
+
+第三章：Spring Boot
 1、启动：
 建了两个文件：
 chapter03\pom.xml:
