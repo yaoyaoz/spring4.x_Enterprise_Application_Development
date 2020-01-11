@@ -22,10 +22,10 @@ public class UserDao {
 
     private JdbcTemplate jdbcTemlate;
 
-    private final String MATCH_COUNT_SQL = " select count(*) from t_user " +
+    private final static String MATCH_COUNT_SQL = " select count(*) from t_user " +
             " where user_name = ? and password = ? ";
 
-    private final String USER_BY_USER_NAME_SQL = " select user_id, user_name, credits " +
+    private final static String USER_BY_USER_NAME_SQL = " select user_id, user_name, credits " +
             " from t_user where user_name= ? ";
 
         private final String UPDATE_LOGIN_INFO_SQL = " update t_user set " +

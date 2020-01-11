@@ -6,6 +6,7 @@
 搜索maven project:
 双击jetty:run
 在浏览器输入localhost:8000/bbs/index.html访问
+默认用户名/密码：admin/1123456
 
 
 已经弄明白的问题：

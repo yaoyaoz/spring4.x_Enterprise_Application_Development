@@ -7,7 +7,7 @@
     <groupId>com.yaoyao</groupId>
     <artifactId>chapter02</artifactId>
     <version>1.0</version>
-    <!--<packaging>war</packaging>-->
+    <packaging>war</packaging><!--之前加上这句会报错：WEB-INF/web.xml，现在又没报错了-->
     <name>Spring4.x实战示例 chapter02</name>
     <description>Spring4.x实战示例 chapter02</description>
 
@@ -94,11 +94,11 @@
             <version>6.8.7</version>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-        </dependency>-->
+        </dependency>
 
     </dependencies>
 
