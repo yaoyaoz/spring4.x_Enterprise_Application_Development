@@ -23,16 +23,18 @@
 4.5.1 BeanFactory中Bean的生命周期
     com.yaoyao.context.Car implements BeanFactoryAware, BeanNameAware, InitializingBean, DisposableBean
     com.yaoyao.context.MyInstantiationAwareBeanPostProcessor
+    com.yaoyao.context.MyBeanPostProcessor
     context/bean.xml
     com.yaoyao.context.BeanLifeCycle
     运行com.yaoyao.context.BeanLifeCycle.main
+
+4.5.2 ApplicationContext中Bean的生命周期
+    com.yaoyao.context.MyBeanFactoryPostProcessor
+    bean.xml没有敲，不知道怎么启动P114
 
 问题：
 1、com.yaoyao.beanfactory.BeanFactoryTest.getBean
     照着例子敲的，也没跟源码，不太理解
 2、@Configuration和@repository有什么区别呢？都只是定义一个bean？
 3、bean的生命周期照着敲了一下，没有详细去看周期的每一步（4.5.1）
-
-
-待操作：
-1、P78 最上面的配置文件 geli 操作一下
+4、ApplicationContext不知道怎么启动（4.5.2）
