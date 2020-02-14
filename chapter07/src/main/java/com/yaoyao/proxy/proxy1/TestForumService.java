@@ -1,4 +1,4 @@
-package com.yaoyao.proxy1;
+package com.yaoyao.proxy.proxy1;
 
 /**
  * 性能监视横切代码的测试类

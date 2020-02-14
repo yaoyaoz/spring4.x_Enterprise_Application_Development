@@ -1,4 +1,4 @@
-package com.yaoyao.proxy1;
+package com.yaoyao.proxy.proxy1;
 
 /**
  * 包含性能监视横切代码接口

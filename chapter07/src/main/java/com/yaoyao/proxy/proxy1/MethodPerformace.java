@@ -1,4 +1,4 @@
-package com.yaoyao.proxy1;
+package com.yaoyao.proxy.proxy1;
 
 /**
  * 用于记录性能监视信息的类
