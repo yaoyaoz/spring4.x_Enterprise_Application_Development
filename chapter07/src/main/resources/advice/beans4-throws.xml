@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 异常抛出增强 -->
+    <bean id="transactionManager" class="com.yaoyao.advice.advice4_throws.TransactionManager"/>
+    <bean id="target" class="com.yaoyao.advice.advice4_throws.ForumService"/>
+
+    <!-- 因ForumService是类，所以使用cglib代理，p:proxyTargetClass默认为true -->
+    <bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean"
+        p:interceptorNames="transactionManager"
+        p:target-ref="target"/>
+
+</beans>

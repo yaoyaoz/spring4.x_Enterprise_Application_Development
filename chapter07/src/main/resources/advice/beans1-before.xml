@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 前置增强： 通过ProxyFactoryBean配置代理-->
+    <bean id="greetingBeforeAdvice" class="com.yaoyao.advice.advice1_before.GreetingBeforeAdvice"/>
+    <bean id="target" class="com.yaoyao.advice.advice1_before.NaiveWaiter"/>
+
+    <!-- 1、JDK代理：
+     proxyInterfaces:指定代理的接口，如果是多个接口，请使用<list>元素
+     interceptorNames:指定使用的增强
+     target-ref:指定对哪个bean进行代理
+    -->
+    <!--<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+        p:proxyInterfaces="com.yaoyao.advice.Waiter"
+        p:interceptorNames="greetingBeforeAdvice"
+        p:target-ref="target"/>-->
+
+    <!-- 2、cglib代理：
+     将proxyTargetClass设置为true后，无序再设置proxyInterfaces属性，即使设置了也会被ProxyFactoryBean忽略
+     -->
+    <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="greetingBeforeAdvice"
+          p:target-ref="target"
+          p:proxyTargetClass="true"/>
+
+</beans>

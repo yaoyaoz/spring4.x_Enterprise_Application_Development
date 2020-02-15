@@ -1,4 +1,4 @@
-package com.yaoyao.advice;
+package com.yaoyao.advice.advice1_before;
 
 /**
  * 服务员接口实现类：
@@ -8,10 +8,10 @@ package com.yaoyao.advice;
  */
 public class NaiveWaiter implements Waiter {
     public void greetTo(String name) {
-        System.out.println("greet to " + name + "...");
+        System.out.println("业务代码：greet to " + name + "...");
     }
 
     public void serveTo(String name) {
-        System.out.println("serving " + name + "...");
+        System.out.println("业务代码：serving " + name + "...");
     }
 }

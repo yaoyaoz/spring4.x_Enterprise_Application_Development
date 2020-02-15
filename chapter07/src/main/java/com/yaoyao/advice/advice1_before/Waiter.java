@@ -1,4 +1,4 @@
-package com.yaoyao.advice;
+package com.yaoyao.advice.advice1_before;
 
 /**
  * 服务员接口
