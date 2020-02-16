@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 静态方法匹配切面 -->
+
+    <bean id="waiterTarget" class="com.yaoyao.advisor.advisor1.Waiter"/>
+    <bean id="sellerTarget" class="com.yaoyao.advisor.advisor1.Seller"/>
+    <bean id="greetingBeforeAdvice" class="com.yaoyao.advice.advice1_before.GreetingBeforeAdvice"/>
+    <bean id="greetingAdvisor" class="com.yaoyao.advisor.advisor1.GreetingAdvisor"
+        p:advice-ref="greetingBeforeAdvice"/><!-- 向切面注入一个前置增强 -->
+
+    <bean id="parent" abstract="true"
+          class="org.springframework.aop.framework.ProxyFactoryBean"
+        p:interceptorNames="greetingAdvisor"
+        p:proxyTargetClass="true"/>
+
+    <bean id="waiter" parent="parent" p:target-ref="waiterTarget"/>
+    <bean id="seller" parent="parent" p:target-ref="sellerTarget"/>
+
+</beans>

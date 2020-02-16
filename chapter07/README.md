@@ -44,7 +44,25 @@ com.yaoyao.advice
 
 ### 7.3.6 引介增强
 
-com.yaoyao.advice.advice5_introduce.TestIntroduce
+测试类：com.yaoyao.advice.advice5_introduce.TestIntroduce
+
+## 7.4 创建切面
+
+### 7.4.3 静态普通方法名匹配切面
+
+测试类：com.yaoyao.advisor.advisor1.TestGreetingAdvisor
+
+### 7.4.4 静态正则表达式方法匹配切面
+
+测试类：com.yaoyao.advisor.advisor2.TestRegexpAdvisor
+
+### 7.4.5 动态切面
+
+测试类：com.yaoyao.advisor.advisor3.TestDynamicAdvisor
+
+### 7.4.6 流程切面
+
+测试类：
 
 
 
