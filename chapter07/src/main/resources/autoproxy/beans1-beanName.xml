@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用Bean名进行自动代理 -->
+
+    <bean id="waiter" class="com.yaoyao.advisor.advisor1.Waiter"/>
+    <bean id="seller" class="com.yaoyao.advisor.advisor1.Seller"/>
+    <bean id="greetingBeforeAdvice" class="com.yaoyao.advice.advice1_before.GreetingBeforeAdvice"/>
+
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator"
+        p:beanNames="*er"
+        p:interceptorNames="greetingBeforeAdvice"
+        p:optimize="true"/>
+
+</beans>

@@ -64,7 +64,15 @@ com.yaoyao.advice
 
 测试类：com.yaoyao.advisor.advisor4.TestControlFlow
 
+## 7.5 自动创建代理
 
+### 7.5.2 BeanNameAutoProxyCreator
+
+测试类：com.yaoyao.autoproxy.autoproxy1_beanName.TestBeanNameAutoProxyCreator
+
+### 7.5.3 DefaultAdvisorAutoProxyCreator
+
+测试类：com.yaoyao.autoproxy.autoproxy2_default.TestDefaultAdvisorAutoProxyCreator
 
 
 
