@@ -74,6 +74,12 @@ com.yaoyao.advice
 
 测试类：com.yaoyao.autoproxy.autoproxy2_default.TestDefaultAdvisorAutoProxyCreator
 
+### 7.5.4 AOP无法增强疑难问题剖析
+
+测试类：com.yaoyao.autoproxy.autoproxy3_issue.TestAopAware
+
+报错，没有看
+
 
 
 
