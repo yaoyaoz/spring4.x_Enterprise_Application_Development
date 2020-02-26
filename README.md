@@ -1,7 +1,6 @@
 # spring4.x_Enterprise_Application_Development
 
-跟着《精通Spring 4.x 企业应用开发实践》敲的小例子 第二遍开始看  
-第一遍看到01-05了，现在接着看跟不上了，就又回头快速过一遍吧  
+跟着《精通Spring 4.x 企业应用开发实践》敲的小例子
 
 ## 目录：
 
@@ -24,3 +23,6 @@
 
 第7章	Spring AOP基础
 
+> AOP无法增强那里没看懂怎么解决的
+
+第8章	基于@AspectJ和Schema的AOP
