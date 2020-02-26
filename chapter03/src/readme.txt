@@ -20,6 +20,10 @@ com.yaoyao.web.BbsDaemon
 就启动起来了，神奇的spring boot。
 启动com.yaoyao.web.BbsDaemon.main，在浏览器访问http://localhost:8080，
 即可在页面上显示“欢迎光临瑶瑶论坛！
+注意：
+springBoot应用如果是建在项目的一个module里面，直接右键启动，会找不到有视图的页面（如jsp），会一直报404错误；
+所以基于springBoot的应用在开发调试的时，
+一定要基于springBoot提供的spring-boot-maven-plugin插件命令来运行应用或通过springBoot命令来运行应用。
 
 启动这两个方法都可以，如果要在Maven Project——>Plugins——>spring-boot里面启动，就要注释一个方法：
 com.yaoyao.web.BbsDaemon.main

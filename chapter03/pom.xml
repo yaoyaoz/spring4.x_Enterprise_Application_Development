@@ -14,14 +14,14 @@
     <groupId>com.yaoyao</groupId>
     <artifactId>chapter03</artifactId>
     <version>1.0</version>
-    <name>Spring4.x第三章实例</name>
+    <name>chapter03</name>
     <packaging>war</packaging>
 
 
-        <!--<properties>
-            &lt;!&ndash; 父类指定了spring的版本为<spring.version>4.2.5.RELEASE</spring.version>，这里可以修改，但是改成4.2.2后，启动会报错 &ndash;&gt;
-            <spring.version>4.2.2.RELEASE</spring.version>
-        </properties>-->
+    <!--<properties>
+        &lt;!&ndash; 父类指定了spring的版本为<spring.version>4.2.5.RELEASE</spring.version>，这里可以修改，但是改成4.2.2后，启动会报错 &ndash;&gt;
+        <spring.version>4.2.2.RELEASE</spring.version>
+    </properties>-->
 
     <!-- 根据应用需要添加不同类型的启动器依赖 -->
     <dependencies>

@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * @author: yaoyao
  * @date 2020-02-26
  */
-public class DemoTest {
+public class TestDemo {
 
     @Test
     public void testAnno() {

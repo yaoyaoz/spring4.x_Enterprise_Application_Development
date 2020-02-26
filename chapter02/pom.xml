@@ -2,14 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring4</artifactId>
+        <groupId>com.yaoyao</groupId>
+        <version>1.0</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yaoyao</groupId>
     <artifactId>chapter02</artifactId>
-    <version>1.0</version>
     <packaging>war</packaging><!--之前加上这句会报错：WEB-INF/web.xml，现在又没报错了-->
-    <name>Spring4.x实战示例 chapter02</name>
-    <description>Spring4.x实战示例 chapter02</description>
+    <name>chapter02</name>
+    <description>chapter02</description>
 
     <properties>
         <file.encoding>UTF-8</file.encoding>
@@ -18,6 +21,7 @@
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <servlet-api.version>3.0-alpha-1</servlet-api.version>
         <aspectj.version>1.8.1</aspectj.version>
+        <testng.version>6.8.7</testng.version>
     </properties>
 
     <dependencies>
