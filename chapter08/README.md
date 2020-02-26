@@ -6,5 +6,5 @@ com.yaoyao.anno
 
 ## 8.3 @AspectJ切面
 
-
+com.yaoyao.aspect.aspect01
 
