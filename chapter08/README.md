@@ -8,3 +8,8 @@ com.yaoyao.anno
 
 com.yaoyao.aspect.aspect01
 
+## 8.5 切点函数详解
+
+### 8.5.1 @annotation()
+
+com.yaoyao.aspect.aspect02_annotation
