@@ -12,7 +12,7 @@
     <artifactId>chapter08</artifactId>
 
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <asm.version>4.0</asm.version>
         <aspectj.version>1.8.1</aspectj.version>
         <spring.version>4.2.2.RELEASE</spring.version>
