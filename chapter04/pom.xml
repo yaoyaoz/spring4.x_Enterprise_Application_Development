@@ -12,7 +12,7 @@
     <artifactId>chapter04</artifactId>
 
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.2.2.RELEASE</spring.version>
     </properties>
 
