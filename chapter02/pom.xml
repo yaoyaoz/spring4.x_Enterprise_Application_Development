@@ -16,7 +16,7 @@
 
     <properties>
         <file.encoding>UTF-8</file.encoding>
-        <spring.version>4.2.2.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <mysql.version>5.1.29</mysql.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <servlet-api.version>3.0-alpha-1</servlet-api.version>
